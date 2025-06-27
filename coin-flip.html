@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip The Coin</title>
+</head>
+
+<body>
+    <p>Guess a side of coin:</p>
+    <p>
+        <button onclick="
+            coin = Math.random() < .5 ? 'heads' : 'tails';
+            result = coin === 'tails'? 'You Lose' : 'You Win';
+            console.log(result);
+            ">Heads</button>
+        <button onclick="
+            coin = Math.random() < .5 ? 'heads' : 'tails';
+            result = coin === 'heads'? 'You Lose' : 'You Win';
+            console.log(result);
+            ">Tails</button>
+    </p>
+    <p>
+        <button onclick="
+            location.reload();    
+        ">Go Again?</button>
+    </p>
+
+    <script>
+        // let coin = Math.random() < .5 ? "heads" : "tails";
+        // result = coin; //problem asked to store it in result, otherwise redundant
+        let coin;
+        let result;
+    </script>
+</body>
+
+</html>

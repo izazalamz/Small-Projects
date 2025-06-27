@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amusement Park</title>
+</head>
+
+<body>
+
+    <script>
+        let age = 4;
+        let discount = false;
+
+        // only check the age restriction for discount
+        // discount = (age <= 6 || age > 65) || false;
+        // discount ? console.log("Discount") : console.log("Not Discount");
+
+        // checking age restriction and isHoliday for discount
+        let isHoliday = true;
+        discount = isHoliday && ((age <= 6 || age > 65));
+        discount ? console.log("Discount") : console.log("Not Discount");
+
+    </script>
+</body>
+
+</html>
