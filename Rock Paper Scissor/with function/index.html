@@ -33,15 +33,9 @@
                 } else {
                     result = 'Tie';
                 }
-            } else if (move == 'paper') {
-                if (bot == 'rock') {
-                    result = 'You lose';
-                } else if (bot == 'paper') {
-                    result = 'You Win';
-                } else {
-                    result = 'Tie';
-                }
-            } else if (move == 'rock') {
+            }
+
+            else if (move == 'paper') {
                 if (bot == 'rock') {
                     result = 'You lose';
                 } else if (bot == 'paper') {
@@ -50,6 +44,17 @@
                     result = 'Tie';
                 }
             }
+
+            else if (move == 'rock') {
+                if (bot == 'rock') {
+                    result = 'You lose';
+                } else if (bot == 'paper') {
+                    result = 'You Win';
+                } else {
+                    result = 'Tie';
+                }
+            }
+
             alert(`You picked ${move}. computer picked ${bot}. ${result}`);
         }
         function pickCompMove() {
