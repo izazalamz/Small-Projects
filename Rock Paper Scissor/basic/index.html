@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can you win?</title>
+</head>
+
+<body>
+    <p>Rock Paper Scissor</p>
+    <button onclick="
+        let bot ='';
+        let num = Math.random();
+        if (num>= 0 && num <0.33){
+                bot = 'rock';
+        }
+        else if (num>= 0.33 && num <0.66){
+                bot = 'paper';
+        }
+        else if (num>= 0.66 && num <0.99){
+                bot = 'scissor';
+        }
+        if (bot == 'paper'){
+            alert(`you lose noob shit. Paper beats Rock`);
+        } else if( bot == 'scissor'){
+            alert(`you win noob shit. Rock beats Scissor`);
+        } else{
+            alert(`computer will get you next time`);
+        }
+
+    ">Rock</button>
+    <button onclick="
+        let bot = '';
+        const num = Math.random();
+        if (num>= 0 && num <0.33){
+                bot = 'rock';
+        }
+        else if (num>= 0.33 && num <0.66){
+                bot = 'paper';
+        }
+        else if (num>= 0.66 && num <0.99){
+                bot = 'scissor';
+        }
+
+        if (bot == 'scissor'){
+            alert(`you lose noob shit. scissor beats paper`);
+        } else if( bot == 'rock'){
+            alert(`you win noob shit. paper beats rock`);
+        } else{
+            alert(`computer will get you next time`);
+        }
+    ">Paper</button>
+    <button onclick="
+    let bot ='';
+    const num = Math.random();
+    if (num>= 0 && num <0.33){
+                bot = 'rock';
+        }
+        else if (num>= 0.33 && num <0.66){
+                bot = 'paper';
+        }
+        else if (num>= 0.66 && num <0.99){
+                bot = 'scissor';
+        }
+        if (bot == 'rock'){
+            alert(`you lose noob shit. rock beats scissor`);
+        } else if( bot == 'paper'){
+            alert(`you win noob shit. scissor beats paper`);
+        } else{
+            alert(`computer will get you next time`);
+        }
+">Scissor</button>
+    <script>
+
+    </script>
+</body>
+
+</html>
