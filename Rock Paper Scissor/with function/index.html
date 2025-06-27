@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can you win?</title>
+</head>
+
+<body>
+    <p>Rock Paper Scissor</p>
+    <button onclick="
+        playGame('rock');
+    ">Rock</button>
+    <button onclick="
+        playGame('paper');
+    ">Paper</button>
+    <button onclick="
+        playGame('scissor');
+    ">Scissor</button>
+
+
+    <script>
+        function playGame(move) {
+            let bot = pickCompMove();
+            console.log(`computer chose: ${bot}`);
+            let result = '';
+            if (move == 'scissor') {
+                if (bot == 'rock') {
+                    result = 'You lose';
+                } else if (bot == 'paper') {
+                    result = 'You Win';
+                } else {
+                    result = 'Tie';
+                }
+            } else if (move == 'paper') {
+                if (bot == 'rock') {
+                    result = 'You lose';
+                } else if (bot == 'paper') {
+                    result = 'You Win';
+                } else {
+                    result = 'Tie';
+                }
+            } else if (move == 'rock') {
+                if (bot == 'rock') {
+                    result = 'You lose';
+                } else if (bot == 'paper') {
+                    result = 'You Win';
+                } else {
+                    result = 'Tie';
+                }
+            }
+            alert(`You picked ${move}. computer picked ${bot}. ${result}`);
+        }
+        function pickCompMove() {
+            let bot = '';
+            const num = Math.random();
+            if (num >= 0 && num < 0.33) {
+                bot = 'rock';
+            }
+            else if (num >= 0.33 && num < 0.66) {
+                bot = 'paper';
+            }
+            else if (num >= 0.66 && num < 0.99) {
+                bot = 'scissor';
+            }
+            return bot;
+        }
+    </script>
+</body>
+
+</html>
