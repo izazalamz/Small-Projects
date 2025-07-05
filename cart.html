@@ -9,39 +9,64 @@
 
 
 <body>
-    <button onclick="
-            quantity+=4;
-            console.log(`Quantity after +4: ${quantity}`);
+    <p>
+        <button onclick="
+            console.log(`Cart quantity: ${quantity}`);
+        ">Show Quantity</button>
+    </p>
+    <p>
+        <button onclick="
+        updateQuantity(1);
+        ">Add to Cart</button>
+        <button onclick="
+            updateQuantity(2);
+        ">+2</button>
+        <button onclick="
+            updateQuantity(3);
+        ">+3</button>
+        <button onclick="
+            updateQuantity(4);
         ">+4</button>
-    <button onclick="
-        quantity+=5;
-        console.log(`Quantity after +5: ${quantity}`);
+        <button onclick="
+            updateQuantity(5);
         ">+5</button>
-    <button onclick="
-        quantity--;
-        quantity--;
-        console.log(`Quantity after -2: ${quantity}`);
+    </p>
+    <p>
+
+        <button onclick="
+        updateQuantity(-1);
+        ">Remove from</button>
+        <button onclick="
+            updateQuantity(-2);
         ">-2</button>
-    <button onclick="
-        quantity-=3;
-        console.log(`Quantity after -3: ${quantity}`);
+        <button onclick="
+            updateQuantity(-3);
         ">-3</button>
 
+    </p>
+    <p>
+        <button onclick="
+            quantity = 0;
+            console.log('Cart was reset');
+            console.log(`Cart quantity: ${quantity}`);
+            ">Reset Cart</button>
+    </p>
     <script>
         let quantity = 0;
-        console.log(`Quantity: ${quantity}`);
+        function updateCartQuantity(change) {
+                if (cartQuantity + change > 10) {
+                    alert('The cart is full');
+                    return;
+                }
 
-        let coffee = 5;
-        let bagel = 3;
-        let soup = 9;
-        let cost = coffee + 2 * bagel + soup;
-        let tax = cost * .1;
-        console.log(`Cost of food:$${cost}`);
-        console.log(`Tax of food:$${tax}`);
+                if (cartQuantity + change < 0) {
+                    alert('Not enough items in the cart');
+                    return;
+                }
 
-        let totalCost = tax + cost;
-        console.log(`Total cost: $${totalCost}`);
-
+                cartQuantity += change;
+                console.log(`Cart quantity: ${cartQuantity}`);
+            }
     </script>
 </body>
 
